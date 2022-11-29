@@ -1,23 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button
-      defaultHref="/"
-      text="Salir"
-      mode="ios"
-      >
 
-      </ion-back-button>
-    </ion-buttons>
-
-    <ion-title>menuprincipal</ion-title>
+    <ion-title> Menú Principal</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-button routerLink="/salasylaboratorios">Salas y Laboratorios</ion-button>
-<ion-button routerLink="/tomarsalalab">Tomar sala/lab</ion-button>
-<ion-button routerLink="/desocuparsalalab">Desocupar sala/lab</ion-button>
-<ion-button routerLink="/perfil">Perfil</ion-button>
-<ion-button routerLink="/configuracion">Configuración</ion-button>
+
+  <ion-list>
+    <ion-item
+    *ngFor="let componente of componentes"
+    [routerLink]="componente.direccion"
+    >
+    <ion-icon [name]="componente.icono" slot="start" color="secondary"></ion-icon>
+    {{componente.nombre}}
+  </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" slot="fixed" horizontal="end">
+    <ion-fab-button routerLink="/iniciosesion">
+      <ion-icon name="exit-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

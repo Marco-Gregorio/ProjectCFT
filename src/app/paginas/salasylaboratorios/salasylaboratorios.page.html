@@ -1,4 +1,24 @@
 <app-header titulo="Salas y Laboratorios"></app-header>
 <ion-content>
+    <ion-card  color="morado" mode= "ios" *ngFor="let dato_obtenido of datos_obtenidos">
+    <ion-card-header>
+        <ion-card-title class="tamano"><ion-icon name="person"></ion-icon>
+            Codigo: {{dato_obtenido.codigo}}</ion-card-title>
+     </ion-card-header>
+    <ion-item>
+        Nombre: {{dato_obtenido.nombre}}
+    </ion-item>
+    <ion-item >
+        Descripcion: {{dato_obtenido.descripcion}}
+    </ion-item>
+    <ion-item>
+        Direccion: {{dato_obtenido.direccion}}
+    </ion-item>
+    <ion-item>
+        Establecimiento: {{dato_obtenido.establecimiento}}
+    </ion-item>
+
+</ion-card>
+
 
 </ion-content>

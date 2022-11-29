@@ -1,0 +1,41 @@
+<app-header titulo="Agregar Sala/Lab"></app-header>
+
+<ion-content>
+
+  <ion-card>
+
+
+      <ion-item>
+        <ion-label>Código sala/laboratorio</ion-label>
+        <ion-input type="text" name="codigo" [(ngModel)]="datos_formulario.idcodigo"></ion-input>
+      </ion-item>
+
+    <ion-item>
+      <ion-label>Nombre sala/laboratorio</ion-label>
+      <ion-input type="text" name="nombre" [(ngModel)]="datos_formulario.nombre"></ion-input>
+
+      <ion-item>
+        <ion-label>Capacidad</ion-label>
+        <ion-input type=text name="capacidad" [(ngModel)]="datos_formulario.capacidad"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Descripción</ion-label>
+        <ion-input type=text name="descripcion" [(ngModel)]="datos_formulario.descripcion"></ion-input>
+      </ion-item>
+  
+    <ion-item>
+      <ion-label>Dirección</ion-label>
+      <ion-input type=text name="direccion" [(ngModel)]="datos_formulario.direccion"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Establecimiento</ion-label>
+      <ion-input value="CFT Estatal Arica y Parinacota" [disabled]="true" type="text" name="establecimiento" [(ngModel)]="datos_formulario.establecimiento"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="EnviarDatos()">Agregar</ion-button>
+   
+
+  </ion-card>
+
+</ion-content>

@@ -1,9 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>iniciosesion</ion-title>
+    <ion-title>Iniciar Sesión</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  
+<ion-subtitle>Organizador de Salas y Laboratorios</ion-subtitle>
+    <img alt="Silhouette of mountains" src="https://i.ibb.co/wp54XNR/logo-fix.jpg" />
+    <ion-item fill="solid">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" ngModel email placeholder ="aaa.aaa@cftmail.cl"></ion-input>
+      <ion-note slot="error">Email invalido</ion-note>
+    </ion-item>
+    <ion-item fill="solid">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" placeholder="*******"></ion-input>
+      </ion-item>
+      <ion-button expand="block" href="/menuprincipal">Ingresar</ion-button>
 </ion-content>

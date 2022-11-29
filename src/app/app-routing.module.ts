@@ -5,7 +5,7 @@ const routes: Routes = [
   
   {
     path: '',
-    redirectTo: 'menuprincipal',
+    redirectTo: 'iniciosesion',
     pathMatch: 'full'
   },
   {
@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./paginas/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'agregarsala',
+    loadChildren: () => import('./paginas/agregarsala/agregarsala.module').then( m => m.AgregarsalaPageModule)
   },
   {
     path: 'configuracion',
